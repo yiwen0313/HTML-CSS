@@ -194,9 +194,48 @@
 }
 
 /* 设置导航条中的li */
-.nav-wrapper li{
+.nav > li{
     float: left;
 }
+
+/* ----左侧导航菜单--- */
+
+.all-goods-wrapper{
+    position: relative;
+}
+
+.left-menu{
+    width: 234px;
+    height: 420px;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    z-index: 999;
+    left: -120px;
+    line-height: 1;
+    padding: 20px 0;
+}
+
+ul .left-menu li a{
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+    margin-right: 0;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+ul .left-menu li a:hover{
+    color:#fff;
+    background-color: #ff6700;
+}
+
+.left-menu a i{
+    float: right;
+    line-height: 42px;
+}
+
+/* ----左侧导航end--- */
 
 .nav-wrapper li a{
     font-size: 16px;
@@ -230,6 +269,8 @@
     top: 100px;
     left: 0;
     transition: height 0.3s;
+    background-color: #fff;
+    overflow: hidden;
     z-index: 9999;
 }
 
@@ -239,6 +280,7 @@
     border-top: 1px solid rgba(224, 224, 224);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
 }
+
 
 
 /* ------搜索框------ */
