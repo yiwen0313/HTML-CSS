@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .box2{
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        文档流（nomal flow）
+            z
+
+            元素在文档流中有什么特点：
+                - 块元素
+                    - 块元素会在页面中独占一行（自上向下垂直排列）
+                    - 默认宽度是父元素的全部（会把父元素撑满）
+                    - 默认高度是被内容（子元素）撑开
+                - 行内元素
+                    - 行内元素不会独占页面一行，只占自身的大小
+                    - 行内在页面中空间水平排列，如果一行之中不能容纳下所有的行内元素
+                        则元素会换到第二行继续自左向右排列（与书写习惯一致）
+                    - 行内元素的默认宽度和高度都是被内容撑开
+                         
+
+     -->
+     <div class="box1">我是div1</div>
+     <div class="box2">我是div2</div>
+
+     <span>我是span1</span>
+     <span>我是span2</span>
+</body>
+</html>

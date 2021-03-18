@@ -1,0 +1,270 @@
+/* 主页index.html的样式表 */
+
+/* 顶部导航栏的容器 */
+.top-bar-wrapper{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+}
+
+.topbar a{
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.topbar a:hover{
+    color: #fff;
+}
+
+/* 设置分隔线 */
+.topbar .line{
+    font-size: 12px;
+    color: #424242; 
+    margin: 0 8px;
+}
+
+
+/* 设置左侧导航栏浮动 */
+.service, .topbar li{
+    float: left;
+}
+
+.app{
+    position: relative;
+}
+
+/* 设置小三角 */
+.app::after{
+    display: none;
+    content: '';
+    /* 开启绝对定位 */
+    position: absolute;
+    /* display: block; */
+    width: 0px;
+    height: 0px;
+    /* 设置四个方8向的边框 */
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 设置下边框颜 色 */
+    border-bottom-color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.app:hover .qrcode{
+    height: 148px;
+}
+
+.app:hover::after{
+    display: block;
+}
+
+.app .qrcode{
+    /* display: none; */
+    position: absolute;
+    width: 124px;
+
+    /* height: 148px; */
+    height: 0;
+    overflow: hidden;
+
+    left: -40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3) ;
+    line-height: 1;
+    text-align: center;
+    background-color: #fff;
+
+    transition: height 0.3s;
+    z-index: 9999;
+}
+
+/* 设置二维码图片 */
+.app .qrcode img{
+    width: 90px;
+    margin: 17px;
+    margin-bottom: 10px;
+}
+
+/* 设置二维码文字 */
+.app .qrcode span{  
+    font-size: 14px;
+    color: #000;
+}
+
+/* 设置右侧导航栏浮动 */
+.user-info, .shop-cart{
+    float: right;
+}
+
+.shop-crat{
+    margin-left: 25px;
+}
+
+.shop-cart .shop{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+/* 设置购物车移入样式 */
+.shop-cart:hover .shop{
+    background-color: #fff;
+    color: #ff6700; 
+    height: 41px;
+}
+
+.shop-cart i{
+    margin-right: 2px;
+    border-bottom: 10px;
+}
+
+.shop{
+    position: relative;
+}
+
+/* 设置购物车下拉框 */
+.shop .cart{
+    /* display: none; */
+    position: absolute;
+    width: 357px;
+
+    /* height: 133px;   */
+    height: 0;
+    overflow: hidden;
+
+    left: -237px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    
+    transition: height 0.3s;
+
+    z-index: 9999;
+}
+
+.shop:hover .cart{
+    height: 133px;
+}
+
+.shop:hover::after{
+    display: block;
+}
+
+/* 设置购物车下拉框字体 */
+.shop span{
+    display: block;
+    padding-top: 45px;
+    color: #000;
+}
+
+/* -------------------------------------头部------------------------------------- */
+
+/* --------------------logo------------------ */
+
+.header-wrapper{
+    position: relative;
+    /* background-color: yellow; */
+}
+
+.header{
+    height: 100px;
+    background-color: #fff;
+    /* background-color: red; */
+}
+
+.header .logo{
+    position: relative;
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px; 
+    overflow: hidden;
+}
+
+.header .logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #ff6700;
+    background-image: url("../img/mi-logo.png");
+    /* 使文字居中 */
+    background-position: center;
+    transition: left 0.2s;
+}
+
+.header .logo:hover .mi{
+    left: 55px;
+}
+
+.header .logo .home{
+    position: absolute;
+    left: -55px;
+    background-image: url("../img/mi-home.png");
+}
+
+.header .logo:hover .home{
+    left: 0px;
+}
+
+
+/* --------中间导航条--------- */
+
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}
+
+.header .nav{
+    /* width: 850px; */
+    height: 100px;
+    /* background-color: aquamarine; */
+    line-height: 100px;
+    padding-left: 58px;
+    /* background-color: #bfa; */
+}
+
+/* 设置导航条中的li */
+.nav-wrapper .nav li{
+    float: left;
+}
+
+.nav-wrapper .nav li a{
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav-wrapper .nav li a:hover{
+    color: #ff6700;
+}
+
+/* 隐藏 “全部商品分类” */
+.all-goods{
+    visibility: hidden;
+}
+
+/* ------中间导航下拉框------ */
+.nav .goods-info{
+    position: absolute;
+    /* height: 228px; */
+    width: 100%;
+    overflow: hidden;
+    /* background-color: aqua; */
+    /* border: 1px solid rgba(224, 224, 224);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1); */
+
+    top: 100px;
+    left: 0;
+    z-index: 9999;
+}
+
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    border: 1px solid rgba(224, 224, 224);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    /* background-color: aqua; */
+}

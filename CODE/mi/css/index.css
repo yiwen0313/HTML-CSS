@@ -1,0 +1,274 @@
+/* 主页index.html的样式表 */
+
+/* -------------------顶部导航条------------------------ */
+
+/* 顶部导航条的容器 */
+.top-bar-wrapper{
+    /* 设置宽度全屏 */
+    width: 100%;
+    /* 设置高度和行高 */
+    height: 40px;
+    line-height: 40px;
+    /* 设置背景颜色 */
+    background-color: #333;   
+}
+
+/* 设置超链接颜色 */
+.topbar a{
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+/* 设置超链接移入的效果 */
+.topbar a:hover{
+    color: #fff;
+}
+
+/* 设置中间分隔线 */
+.topbar .line{
+    color: #424242;
+    font-size: 12px;
+    margin: 0 8px;
+}
+
+/* 设置左侧导航栏 */
+.service, .topbar li{
+    float: left;
+}
+
+.app{
+    position: relative;
+}
+
+/* 设置app下的小三角 */
+
+.app::after{
+    content: '';
+    display: none;
+    /* 开启绝对定位 */
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    /* 去除上边框 */
+    border-top: none;
+    /* 单独设置下边框的颜色 */
+    border-bottom-color: #fff;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.app:hover .qrcode,
+.app:hover::after{
+    display: block;
+    height: 148px;
+}
+
+/* 设置下载app的下拉 */
+.app .qrcode{
+    /* display: none; */
+    position: absolute;
+    left: -40px;
+    width: 124px;
+    /* height: 148px; */
+    height: 0;
+    overflow: hidden;
+    line-height: 1px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+    /* transition   用于为样式设置过渡效果 */
+    transition: height 0.3s;
+}
+
+/* 设置二维码图片 */
+.app .qrcode img{
+    width: 90px;
+    margin: 17px; 
+}
+
+/* 设置二维码下方的文字 */
+.app .qrcode span{
+    font-size: 14px;
+    color: #000;
+}
+
+/* 设置右侧导航栏 */
+.shop-cart, .user-info{
+    float: right;
+}
+
+.shop-cart{
+    margin-left: 25px;
+}
+
+/* 设置购物车 */
+.shop-cart a{
+    width: 120px;
+    background-color: #424242;
+    text-align: center;
+}
+
+.shop-cart:hover a{
+    background-color: #fff;
+    color: #ff6700;
+}
+
+.shop-cart i{
+    margin-right: 2px;
+}
+
+/* ------------------头部-------------------- */
+/* ----------头部logo-------- */
+
+/* 设置中间的header */
+
+.header-wrapper{
+    /* 中间导航条的下拉框参考header-wrapper定位 */
+    position: relative;
+    /* background-color: red; */
+}
+
+.header{
+    height: 100px;
+    /* background-color: yellow; */
+}
+
+/* 设置logo的h1 */
+.header .logo{
+    position: relative;
+    float: left;
+    margin-top: 22px;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    /* 隐藏logo中的文字 */
+    text-indent: -9999px;
+    line-height: 1px;
+}
+
+/* 统一设置logo的超链接 */
+.header .logo a{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    background-color: #ff6700;
+    background-image: url(../img/mi-logo.png);
+    background-position: center;
+    transition: left 0.3s;
+}
+
+/* 设置home图片 */
+.header .logo .home{
+    left: -55px;
+    background-image: url(../img/mi-home.png);
+}
+
+/* 设置鼠标移入之后,两个图片的位置 */
+.header .logo:hover .mi{
+    left: 55px;
+}
+
+.header .logo:hover .home{
+    left: 0;
+}
+
+
+/* ----------中间导航条-------- */
+
+.header .nav-wrapper{
+    float: left;
+    margin-left: 7px;
+}   
+
+
+.header .nav{
+    height: 100px;
+    /* 使文字在父元素中居中 */
+    line-height: 100px;
+    padding-left: 58px;
+}
+
+/* 设置导航条中的li */
+.nav-wrapper li{
+    float: left;
+}
+
+.nav-wrapper li a{
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.nav-wrapper li a:hover{
+    color: #ff6700;
+}
+
+/* 隐藏全部商品 */
+.all-goods{
+    /* 不能用，此方法全部商品不占据页面位置
+    display: none; */
+
+    visibility: hidden;
+}
+
+/* ------弹出层------ */
+
+.nav .goods-info{
+    position: absolute;
+    /* height: 228px; */
+    height: 0;
+    
+    width: 100%;
+    /* background-color: aquamarine; */
+
+    /* border-top: 1px solid rgba(224, 224, 224);
+    box-shadow: 0 5px 2px rgba(0, 0, 0, .2); */
+    top: 100px;
+    left: 0;
+    transition: height 0.3s;
+    z-index: 9999;
+}
+
+.nav .show-goods:hover ~ .goods-info,
+.goods-info:hover{
+    height: 228px;
+    border-top: 1px solid rgba(224, 224, 224);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+
+/* ------搜索框------ */
+
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    background-color: #bfa;
+    float: right;
+    margin-top: 25px;
+    border: 1px solid rgba(224, 224, 224);
+}
+
+
+.search-wrapper .search-inp{
+    /* 通过浮动去除输入框与搜索按钮之间的缝隙 */
+    float: left;
+    /* input里默认存在padding */
+    width: 242px;
+    padding: 0;
+    border: none;
+    height: 50px;
+}
+
+.search-wrapper .search-btn{
+    /* 通过浮动去除输入框与搜索按钮之间的缝隙 */
+    float: left;
+    height: 50px;
+    /* 默认bix-sizing=border-box,即height width设置的值为内容区内边距边框的总大小 */
+    width: 52px;
+    padding: 0;
+    border: none;
+}
