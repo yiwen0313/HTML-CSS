@@ -246,21 +246,38 @@
 .search-wrapper{
     width: 296px;
     height: 50px;
-    background-color: #bfa;
+    /* background-color: #bfa; */
     float: right;
     margin-top: 25px;
-    border: 1px solid rgba(224, 224, 224);
 }
 
 
 .search-wrapper .search-inp{
+    box-sizing: border-box;
     /* 通过浮动去除输入框与搜索按钮之间的缝隙 */
     float: left;
     /* input里默认存在padding */
-    width: 242px;
+    width: 224px;
     padding: 0;
     border: none;
     height: 50px;
+    padding: 0 10px;
+    font-size: 16px;
+    border: 1px solid rgba(224, 224, 224);
+    /* 去除轮廓线 */
+    outline: none;
+}
+
+/* 设置input鼠标移入houdexioaguo */
+.search-wrapper .search-inp:hover,
+.search-wrapper .search-btn:hover + .search-inp{
+    border-color: #b1b1b1;
+}
+
+/* 设置input获取焦点后的样式 */
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + .search-btn{
+    border-color:#ff6700;
 }
 
 .search-wrapper .search-btn{
@@ -271,4 +288,17 @@
     width: 52px;
     padding: 0;
     border: none;
+    background-color: #fff;
+    color: #616161;
+    font-size: 18px;
+    border: 1px solid rgba(224, 224, 224);
+    border-left: none;
 }
+
+.search-wrapper .search-btn:hover{
+    background-color: #ff6700;
+    color: #fff;
+    /* border-color: #ff6700; */
+    border: none;
+}
+

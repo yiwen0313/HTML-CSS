@@ -268,3 +268,50 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
     /* background-color: aqua; */
 }
+
+
+/* ---------搜索框--------- */
+
+.search-wrapper{
+    width: 296px;
+    height: 50px;
+    margin-top: 25px;
+    float: right;
+    background-color: #bfa;
+}
+
+.search-wrapper .search-inp{
+    float: left;
+    width: 222px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 0 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-wrapper .search-inp:focus,
+.search-wrapper .search-inp:focus + .search-btn{
+    border-color: #b1b1b1;
+}
+
+.search-wrapper .search-btn:hover{
+    border: none;
+    background-color: #ff6700;
+    color: #fff;
+}
+
+.search-wrapper .search-btn{
+    float: left;
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+    border: none;
+    padding: 0;
+    background-color: #fff;
+    color: #616161;
+    border: 1px solid rgb(224, 224, 224);
+    border-left: none;
+}
