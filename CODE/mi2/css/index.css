@@ -336,7 +336,7 @@ ul .left-menu li a:hover{
 
 .search-wrapper .search-inp:focus,
 .search-wrapper .search-inp:focus + .search-btn{
-    border-color: #b1b1b1;
+    border-color: #ff6700;
 }
 
 .search-wrapper .search-btn:hover{
@@ -406,4 +406,47 @@ ul .left-menu li a:hover{
 .pointer a.active{
     border-color: rgba(0, 0, 0, .4);
     background-color: rgba(224, 224, 224, .4);
+}
+
+/* --两个箭头-- */
+
+.prev-next a{
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    background-image: url("../img/icon-slides.png");
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.prev-next .prev{
+    left: 234px;
+    background-position: -84px 0;
+}
+
+.prev-next .next{
+    right: 0;
+    background-position: -125px 0;
+}
+
+.prev-next .prev:hover{
+    background-position: 0 0;
+}
+
+.prev-next .next:hover{
+    background-position: -42px 0;
+}   
+
+
+/* ----------------------------------固定悬浮条---------------------------------------------- */
+.back-top{
+    width: 26px;
+    height: 206px;
+    background-color: aquamarine;
+    position: fixed;
+    bottom: 100px;
+
+    right: 50%;
+    margin-right: -639px;
 }
