@@ -20,16 +20,26 @@
         .nav-inner{
             /* 设置为弹性容器 */
             display: flex;
+            /* 设置主轴上空白的分布 */
+            justify-content: space-around;
         }
 
         .item{
-            background-color: aquamarine;
-            flex: auto;
+            width: 18%;
+            /* background-color: aquamarine; */
+            /* flex: auto; */
+            text-align: center  ;
         }
 
         .item img{
             /* 设置图片宽度和父元素宽度一样，避免图片从元素中溢出 */
             width: 100%;
+        }
+
+        .item a{
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -42,26 +52,31 @@
             <div class="item" >
                 <a href="#">
                     <img src="img/16/1.png">
+                    <span>天猫</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/2.png">
+                    <span>聚划算</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/3.png">
+                    <span>天猫国际</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/4.png">
+                    <span>外卖</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/5.png">
+                    <span>天猫超市</span>
                 </a>
             </div>
         </div>
@@ -70,26 +85,31 @@
             <div class="item" >
                 <a href="#">
                     <img src="img/16/6.png">
+                    <span>充值中心</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/7.png">
+                    <span>飞猪旅行</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/8.png">
+                    <span>领金币</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/9.png">
+                    <span>拍卖</span>
                 </a>
             </div>
             <div class="item" >
                 <a href="#">
                     <img src="img/16/10.png">
+                    <span>分类</span>
                 </a>
             </div>
         </div>
